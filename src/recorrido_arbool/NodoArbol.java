@@ -43,14 +43,11 @@ public class NodoArbol<T> {
         }
         if (pos>= 0 && pos <hijo.length){
         if(hijo[pos] == null){
-          hijo[pos] = new NodoArbol<>(dato, null);
+          hijo[pos] = new NodoArbol(dato, null);
           }else{
             hijo[pos].setDato(dato);
         }
-        
-        
-      }
-          
+      }          
     }
     
     public void preOrden(){
