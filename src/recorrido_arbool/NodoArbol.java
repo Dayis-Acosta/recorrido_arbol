@@ -37,9 +37,20 @@ public class NodoArbol<T> {
     
     public void setHijo(int pos, T dato) {
     //Solo agrego los parametros de int pos, T dato. para iniciar
+        System.out.println(hijo);
+        if (hijo == null){
+            hijo = new NodoArbol[2];
+        }
+        if (pos>= 0 && pos <hijo.length){
+        if(hijo[pos] == null){
+          hijo[pos] = new NodoArbol<>(dato);
+          }else{
+            hijo[pos].setDato(dato);
+        }
         
         
-        
+      }
+          
     }
     
     public void preOrden(){
